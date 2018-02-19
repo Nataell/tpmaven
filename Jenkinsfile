@@ -12,7 +12,7 @@ pipeline {
 			}
 			post {
 				always {
-					echo 'junit 'target/surefire-reports/*.xml''
+					echo "junit 'target/surefire-reports/*.xml'"
 				}
 			}
 		}
