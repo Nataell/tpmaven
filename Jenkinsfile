@@ -3,21 +3,21 @@ pipeline {
 	stages {
 		stage('SonarQube analysis') {
 			steps {
-				sh "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar -Dsonar.host.url=\"${SONAR_HOST_URL}\" -Dsonar.login=\"${SONAR_LOGIN}\""
+				echo "mvn org.sonarsource.scanner.maven:sonar-maven-plugin:3.2:sonar -Dsonar.host.url=\"${SONAR_HOST_URL}\" -Dsonar.login=\"${SONAR_LOGIN}\""
 			}
 		}
 		stage('Build') {
 			steps {
-				sh 'mvn -B -DskipTests clean package'
+				echo 'mvn -B -DskipTests clean package'
 			}
 		}
 		stage('Test') {
 			steps {
-				sh 'mvn test'
+				echo 'mvn test'
 			}
 			post {
 				always {
-					junit 'target/surefire-reports/*.xml'
+					echo "junit 'target/surefire-reports/*.xml'"
 				}
 			}
 		}
