@@ -72,8 +72,11 @@
                 <version>3.0.2</version>
                 <configuration>
                     <archive>
-                        <!--<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>-->
-                        <mainClass>fr.esir.App</mainClass>
+                        <manifest>
+                            <!--<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>-->
+                            <mainClass>fr.esir.App</mainClass>
+                            <addClasspath>true</addClasspath> 
+                        </manifest>
                     </archive>
                 </configuration>
             </plugin>
