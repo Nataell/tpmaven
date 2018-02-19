@@ -74,8 +74,8 @@
                     <archive>
                         <manifest>
                             <!--<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>-->
-                            <mainClass>fr.esir.App</mainClass>
                             <addClasspath>true</addClasspath> 
+                            <mainClass>fr.esir.App</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
